@@ -1,20 +1,36 @@
 body{
-    background-image: url(../images/fondo.gif);
-    background-size: cover;
-    background-position-y:center;
-
+    background-image: url(../images/fondo2.jpg);
+    background-size:100%;
+    background-position: left top;
 }
 
 .navbar{
     display:inline-block;
-    width:250px;
-    height:200px;
+    width:150px;
+    height:auto;
+    margin-top:50px;
+    margin-left:50px;
     margin-bottom:-200px;
+    --s: 20px; /* the size on the corner */
+    --t: 1px;  /* the thickness of the border */
+    --g: 20px; /* the gap between the border and image */
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid rgb(158, 158, 158); /* the color here */
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+}
+
+.navbar ul{
+    padding-left:0;
 }
 
 .navbar li{
-    list-style-type: none;
-    font-size: 20px;
+    list-style-type:none;
+    font-size: 25px;
 }
 
 .navbar a{
@@ -34,67 +50,6 @@ body{
     font-size: 40px;
 }
 
-.navbar li:hover{
-    color:white;
-    transition-duration:0.4s;
-    cursor: pointer;
-}
-
-#imagen{
-    width: 380px;
-    height: 380px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
-}
-
-#imagen img {
-    width: 280px;
-    height: 280px;
-    border:4px solid rgb(255, 255, 255);
-    border-radius:50%;
-    display: block;
-    margin: 0 auto;
-}
-
-
-#nombre h1{
-    text-align:center;
-    font-family: Arial, sans-serif;
-    color:white;
-}
-
-#puesto h2{
-    text-decoration-line:underline;
-    text-align:center;
-    font-family: Arial, sans-serif;
-    color:rgb(139, 135, 135);
-}
-
-#pais{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
-}
-
-#pais h3{
-    width: 350px;
-    text-align:center;
-    font-family: Arial, sans-serif;
-    color:rgb(139, 135, 135);
-}
-
-#redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto;
-}
-
-#redes ion-icon{
-    width:100px;
-    height:100px;
-    margin: 0 30px;
+div{
+    border:yellow solid 1px;
 }

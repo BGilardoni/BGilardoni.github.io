@@ -1,0 +1,107 @@
+.imagen{
+    position: relative;
+    margin:auto;
+    margin-top:100px;
+    border-radius:50%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #000, #272727);
+}
+
+.imagen:before, .imagen:after {
+    content: '';
+    border-radius:50%;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .imagen:after {
+    filter: blur(50px);
+  }
+
+#imagen img {
+    width: 280px;
+    height: 280px;
+    border-radius:50%;
+    display: block;
+    margin: 0 auto;
+    margin-top:0;
+}
+
+
+#nombre h1{
+    text-align:center;
+    font-family: Arial, sans-serif;
+    color:white;
+    margin-top:10px;
+}
+
+#puesto h2{
+    text-decoration-line:underline;
+    text-align:center;
+    font-family: Arial, sans-serif;
+    color:rgb(139, 135, 135);
+}
+
+#pais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+#pais h3{
+    width: 350px;
+    text-align:center;
+    font-family: Arial, sans-serif;
+    color:rgb(139, 135, 135);
+}
+
+#redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    width:500px;
+    height:150px;
+    --s: 40px; /* the size on the corner */
+    --t: 2px;  /* the thickness of the border */
+    --g: 20px; /* the gap between the border and image */
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid rgb(158, 158, 158); /* the color here */
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+}
+
+#redes ion-icon{
+    width:100px;
+    height:100px;
+    margin: 0 30px;
+}

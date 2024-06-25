@@ -1,0 +1,46 @@
+#WhoAmI{
+    display:block;
+    margin:auto;
+    margin-top: 10px;
+    width:500px;
+    color:white;
+}
+
+#WhoAmI h3{
+    font-size:72px;
+    text-align:center;
+}
+
+#WhoAmI p{
+    text-align:justify;
+    font-size:20px;
+    --s: 40px; /* the size on the corner */
+    --t: 1px;  /* the thickness of the border */
+    --g: 20px; /* the gap between the border and image */
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid rgb(68, 202, 255); /* the color here */
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+}
+
+#Tech{
+    display:block;
+    margin:auto;
+    margin-left:0px;
+    margin-top:50px;
+    width:500px;
+    color:white;
+}
+
+#Tech h3{
+    font-size:65px;
+    text-align:center;
+}
+
+#Tech ul{
+    border:yellow solid 1px;
+}
