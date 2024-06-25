@@ -40,7 +40,7 @@
   
   .imagen:after {
     filter: blur(50px);
-  }
+}
 
 #imagen img {
     width: 280px;
